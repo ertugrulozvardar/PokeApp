@@ -16,5 +16,7 @@ PokeApp is an iOS application that that allows you to list pokemons and access t
 
 ## Demo of the application:
 
-https://user-images.githubusercontent.com/44060683/226877532-0af20369-217a-4b61-aed5-3154b9025956.mov
+https://user-images.githubusercontent.com/44060683/226878971-6116da96-a6b3-46ce-8570-6e94c9faf161.mov
+
+
 
