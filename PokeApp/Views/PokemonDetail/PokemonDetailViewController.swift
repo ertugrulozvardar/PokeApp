@@ -57,10 +57,10 @@ class PokemonDetailViewController: UIViewController {
         
         pokemonDetailViewModel.isFetching.bind { [weak self] (isFetching) in
             guard let isFetching = isFetching else { return }
+            let loader = self?.loader()
             DispatchQueue.main.async {
-                let loader = self?.loader()
                 if isFetching {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.2, execute: {
                         self?.stopLoader(loader: loader!)
                     })
                 }

@@ -36,10 +36,10 @@ class HomeAllPokemonsViewController: UIViewController {
         
         homeAllPokemonsViewModel.isFetching.bind { [weak self] (isFetching) in
             guard let isFetching = isFetching else { return }
+            let loader = self?.loader()
             DispatchQueue.main.async {
-                let loader = self?.loader()
                 if isFetching {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
                         self?.stopLoader(loader: loader!)
                     })
                 }

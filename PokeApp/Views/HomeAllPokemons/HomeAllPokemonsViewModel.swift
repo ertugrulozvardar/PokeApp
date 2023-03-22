@@ -29,9 +29,9 @@ final class HomeAllPokemonsViewModel {
     
     func fetchPokemonImages() {
         self.pokemonDetails.value = [:]
-        isFetching.value = true
         if let pokemons = allPokemons.value {
             for pokemon in pokemons {
+                isFetching.value = true
                 pokemonService.fetchPokemonByIndex(index: pokemon.pokemonIndex) { [weak self] result in
                     switch result {
                     case .success(let response):
